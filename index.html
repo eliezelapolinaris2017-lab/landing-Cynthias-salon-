@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cynthia’s Salon | Trujillo Alto</title>
+  <meta name="description" content="Cynthia’s Salon en Trujillo Alto — tu oasis de paz. Servicios de uñas y cabello. Contacto y enlaces de pago editables."/>
+  <meta name="theme-color" content="#0b0f14"/>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- Fondo global -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+
+  <!-- Branding sobre el fondo -->
+  <header class="topbar" role="banner">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">
+        <!-- Si subes assets/logo.png, descomenta esto y comenta el fallback -->
+        <!-- <img src="assets/logo.png" alt="Cynthia’s Salon" /> -->
+        <span class="fallback">CS</span>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Cynthia’s Salon</div>
+        <div class="brand-sub">Trujillo Alto • Oasis de paz</div>
+      </div>
+    </div>
+
+    <nav class="top-actions" aria-label="Navegación">
+      <a class="btn ghost" href="#slide-2" data-goto="1">Servicios</a>
+      <a class="btn ghost" href="#slide-3" data-goto="2">Pagos</a>
+      <a class="btn" href="#slide-4" data-goto="3">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Slider -->
+  <main class="viewport" role="main">
+    <section class="slider" id="slider" aria-label="Landing slider Cynthia’s Salon">
+
+      <!-- Slide 1: Inicio -->
+      <article class="slide" id="slide-1" data-title="Inicio">
+        <div class="content">
+          <h1>Cynthia’s Salon: tu <span class="accent">oasis de paz</span> en Trujillo Alto.</h1>
+          <p class="lead" id="tagline">
+            Un lugar donde el propósito es brindarte siempre el mejor servicio. Aquí siempre tenemos adoración para que,
+            cuando llegues, recibas la paz y la tranquilidad que solo Dios sabe brindar. Ven y disfruta de este oasis de paz.
+          </p>
+
+          <div class="cta-row">
+            <button class="btn" data-goto="1">Ver servicios</button>
+            <button class="btn ghost" data-goto="3">Contactar</button>
+            <button class="btn ghost" data-goto="2">Pagos</button>
+          </div>
+
+          <div class="quickline" aria-label="Valores">
+            <span class="pill">Mejor servicio</span>
+            <span class="pill">Ambiente de paz</span>
+            <span class="pill">Calidad</span>
+            <span class="pill">Amor al detalle</span>
+          </div>
+
+          <div class="meta">
+            <div class="meta-item">
+              <div class="meta-k">Horario</div>
+              <div class="meta-v" id="hours">Abierto · Cierra a las 5:00 p.m.</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-k">Ubicación</div>
+              <div class="meta-v" id="address">Trujillo Alto, 00976</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2: Servicios -->
+      <article class="slide" id="slide-2" data-title="Servicios">
+        <div class="content">
+          <h2>Servicios principales</h2>
+          <p class="lead">
+            Aquí vienes a resolver: uñas y cabello con enfoque profesional y un ambiente que te baja el estrés desde la puerta.
+          </p>
+
+          <div class="services">
+            <div class="svc">
+              <div class="svc-title">Uñas</div>
+              <div class="svc-items">
+                <span>Manicura</span>
+                <span>Pedicura Spa</span>
+                <span>Parafina</span>
+                <span>Jelly Pedi</span>
+                <span>Esmaltado en gel</span>
+                <span>Uñas acrílicas</span>
+                <span>Gel Tips / GelTips</span>
+              </div>
+            </div>
+
+            <div class="svc">
+              <div class="svc-title">Cabello</div>
+              <div class="svc-items">
+                <span>Peinados</span>
+                <span>Cortes</span>
+                <span>Tintes</span>
+                <span>Tratamientos</span>
+                <span>Y más</span>
+              </div>
+            </div>
+
+            <div class="svc">
+              <div class="svc-title">Propósito</div>
+              <div class="svc-items">
+                <span>Adoración</span>
+                <span>Paz</span>
+                <span>Tranquilidad</span>
+                <span>Servicio con amor</span>
+                <span>Experiencia cálida</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Nota importante:</strong> Todo lo trabajo yo misma con mucho amor. Además, este espacio también abrirá
+            oportunidad de empleo a otras técnicas y estilistas para servicios profesionales.
+          </div>
+
+          <div class="cta-row">
+            <button class="btn" data-goto="2">Ir a pagos</button>
+            <button class="btn ghost" data-goto="3">Contacto</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3: Pagos (placeholders) -->
+      <article class="slide" id="slide-3" data-title="Pagos">
+        <div class="content">
+          <h2>Pagos</h2>
+          <p class="lead">
+            Aquí van tus enlaces de pago. Por ahora están en modo “placeholder” para que tú pegues Stripe, ATH Móvil, etc.
+          </p>
+
+          <div class="pay-grid">
+            <a class="pay" href="#" data-pay="stripe">
+              <div class="pay-name">Pagar con Stripe</div>
+              <div class="pay-sub">Edita el link en app.js</div>
+            </a>
+
+            <a class="pay" href="#" data-pay="ath">
+              <div class="pay-name">ATH Móvil</div>
+              <div class="pay-sub">Edita el link en app.js</div>
+            </a>
+
+            <a class="pay" href="#" data-pay="paypal">
+              <div class="pay-name">PayPal</div>
+              <div class="pay-sub">Edita el link en app.js</div>
+            </a>
+
+            <a class="pay" href="#" data-pay="cashapp">
+              <div class="pay-name">Cash App</div>
+              <div class="pay-sub">Edita el link en app.js</div>
+            </a>
+          </div>
+
+          <div class="hint">
+            <div class="hint-title">Dónde se edita</div>
+            <div class="hint-text">
+              Abre <span class="mono">app.js</span> y pega tus URLs reales dentro de <span class="mono">PAY_LINKS</span>.
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn ghost" data-goto="1">Servicios</button>
+            <button class="btn" data-goto="3">Contacto</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 4: Contacto -->
+      <article class="slide" id="slide-4" data-title="Contacto">
+        <div class="content">
+          <h2>Contacto</h2>
+          <p class="lead">
+            Escríbenos y coordinamos. Si vienes con idea clara, lo ejecutamos más rápido. Si no, te asesoramos.
+          </p>
+
+          <div class="contact">
+            <div class="contact-row">
+              <div class="label">Dirección</div>
+              <a class="link" href="#" data-action="maps" id="addressLink">Trujillo Alto, 00976</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="label">Horario</div>
+              <div class="value" id="hours2">Abierto · Cierra a las 5:00 p.m.</div>
+            </div>
+
+            <div class="contact-row">
+              <div class="label">Teléfono</div>
+              <a class="link" href="#" data-action="call" id="phoneLink">(787) 590-3188</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="label">WhatsApp</div>
+              <a class="link" href="#" data-action="whatsapp">Abrir chat</a>
+            </div>
+
+            <div class="contact-row">
+              <div class="label">Instagram</div>
+              <a class="link" href="#" data-action="instagram">Ver perfil</a>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn ghost" data-goto="0">Inicio</button>
+            <button class="btn" data-goto="2">Pagos</button>
+          </div>
+
+          <p class="fineprint">
+            Cynthia’s Salon — donde el servicio se hace con amor y el ambiente te entrega paz (sin PowerPoint, en vivo).
+          </p>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Flechas -->
+    <button class="nav prev" id="prevBtn" aria-label="Anterior">‹</button>
+    <button class="nav next" id="nextBtn" aria-label="Siguiente">›</button>
+
+    <!-- Indicadores -->
+    <div class="dots" id="dots" aria-label="Indicadores"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
