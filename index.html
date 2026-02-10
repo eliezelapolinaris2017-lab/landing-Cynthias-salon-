@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cynthia’s Salon</title>
+  <meta name="description" content="Cynthia’s Salon — Trujillo Alto. Servicios de uñas y cabello. Pagos y contacto."/>
+  <meta name="theme-color" content="#000000"/>
+
+  <!-- Letras combinadas: script + sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;900&family=Sacramento&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <!-- Fondo -->
+  <div class="bg" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+
+  <!-- Header tipográfico -->
+  <header class="header" role="banner">
+    <div class="brandLockup" aria-label="Cynthia’s Salon">
+      <div class="brandScript">Cynthia’s</div>
+      <div class="brandSans">SALON</div>
+    </div>
+    <div class="sub">Trujillo Alto · Oasis de Paz</div>
+  </header>
+
+  <!-- Slider -->
+  <main class="viewport" role="main">
+    <section class="slider" id="slider" aria-label="Landing slider">
+
+      <!-- Slide 1 -->
+      <article class="slide" id="slide-1">
+        <div class="content center">
+          <h1 class="mixTitle"><span>Cynthia’s</span> <b>Salon</b></h1>
+
+          <p class="lead">
+            Un lugar donde el propósito principal es brindarte siempre el mejor servicio.
+            Aquí siempre tenemos adoración para que cuando llegues recibas la paz y la tranquilidad que solo Dios sabe brindar.
+            Ven y disfruta de este oasis de paz.
+          </p>
+
+          <nav class="links" aria-label="Navegación">
+            <a href="#slide-2" data-goto="1">Servicios</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="slide" id="slide-2">
+        <div class="content center">
+          <h2>Servicios</h2>
+
+          <div class="cols" aria-label="Servicios principales">
+            <div>
+              <h3>Uñas</h3>
+              <a>Manicura</a>
+              <a>Pedicura Spa</a>
+              <a>Tratamiento de parafina</a>
+              <a>Jelly Pedi</a>
+              <a>Esmaltado en gel</a>
+              <a>Uñas acrílicas</a>
+              <a>Gel Tips</a>
+            </div>
+
+            <div>
+              <h3>Cabello</h3>
+              <a>Peinados</a>
+              <a>Cortes de cabello</a>
+              <a>Tintes</a>
+              <a>Tratamientos</a>
+              <a>Y más</a>
+            </div>
+          </div>
+
+          <p class="note">
+            Todo trabajado con amor. Además, este espacio abrirá oportunidad de empleo a otras técnicas y estilistas para servicios profesionales.
+          </p>
+
+          <nav class="links" aria-label="Navegación">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="slide" id="slide-3">
+        <div class="content center">
+          <h2>Pagos</h2>
+
+          <nav class="links" aria-label="Enlaces de pago">
+            <a href="#" data-pay="stripe">Stripe</a>
+            <a href="#" data-pay="ath">ATH Móvil</a>
+            <a href="#" data-pay="paypal">PayPal</a>
+            <a href="#" data-pay="cashapp">Cash App</a>
+          </nav>
+
+          <p class="note">Estos enlaces están en placeholder. Edita <span class="mono">PAY_LINKS</span> en <span class="mono">app.js</span>.</p>
+
+          <nav class="links" aria-label="Navegación">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 4 -->
+      <article class="slide" id="slide-4">
+        <div class="content center">
+          <h2>Contacto</h2>
+
+          <nav class="links" aria-label="Acciones de contacto">
+            <a href="#" data-action="call">(787) 590-3188</a>
+            <a href="#" data-action="whatsapp">WhatsApp</a>
+            <a href="#" data-action="maps">Trujillo Alto, 00976</a>
+            <a href="#" data-action="instagram">Instagram</a>
+          </nav>
+
+          <p class="note">Horario: Abierto · Cierra a las 5:00 p.m.</p>
+
+          <nav class="links" aria-label="Navegación">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+          </nav>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Flechas -->
+    <button class="nav prev" id="prev" aria-label="Anterior">‹</button>
+    <button class="nav next" id="next" aria-label="Siguiente">›</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
