@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Cynthia’s Salon</title>
+
+  <!-- Corporativo con peso (nada finito) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="shade" aria-hidden="true"></div>
+
+  <!-- HEADER: solo una vez -->
+  <header class="header">
+    <div class="brand">Cynthia’s Salon</div>
+    <div class="sub">Trujillo Alto · Oasis de Paz</div>
+  </header>
+
+  <main class="viewport">
+    <section class="slider" id="slider">
+
+      <!-- Slide 1 -->
+      <article class="slide" id="slide-1">
+        <div class="content center">
+          <h1>Bienvenida</h1>
+
+          <p class="lead">
+            Un lugar donde el propósito principal es brindarte siempre el mejor servicio.
+            Aquí siempre tenemos adoración para que cuando llegues recibas la paz y la tranquilidad que solo Dios sabe brindar.
+            Ven y disfruta de este oasis de paz.
+          </p>
+
+          <nav class="links">
+            <a href="#slide-2" data-goto="1">Servicios</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="slide" id="slide-2">
+        <div class="content center">
+          <h1>Servicios</h1>
+
+          <div class="cols">
+            <div>
+              <h2>Uñas</h2>
+              <a>Manicura</a>
+              <a>Pedicura Spa</a>
+              <a>Tratamiento de parafina</a>
+              <a>Jelly Pedi</a>
+              <a>Esmaltado en gel</a>
+              <a>Uñas acrílicas</a>
+              <a>Gel Tips</a>
+            </div>
+
+            <div>
+              <h2>Cabello</h2>
+              <a>Peinados</a>
+              <a>Cortes de cabello</a>
+              <a>Tintes</a>
+              <a>Tratamientos</a>
+              <a>Y más</a>
+            </div>
+          </div>
+
+          <nav class="links">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="slide" id="slide-3">
+        <div class="content center">
+          <h1>Pagos</h1>
+
+          <nav class="links">
+            <a href="#" data-pay="stripe">Stripe</a>
+            <a href="#" data-pay="ath">ATH Móvil</a>
+            <a href="#" data-pay="paypal">PayPal</a>
+            <a href="#" data-pay="cashapp">Cash App</a>
+          </nav>
+
+          <p class="note">Edita los enlaces en <b>app.js</b> → <span class="mono">PAY_LINKS</span>.</p>
+
+          <nav class="links">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-4" data-goto="3">Contacto</a>
+          </nav>
+        </div>
+      </article>
+
+      <!-- Slide 4 -->
+      <article class="slide" id="slide-4">
+        <div class="content center">
+          <h1>Contacto</h1>
+
+          <nav class="links">
+            <a href="#" data-action="call">(787) 590-3188</a>
+            <a href="#" data-action="whatsapp">WhatsApp</a>
+            <a href="#" data-action="maps">Trujillo Alto, 00976</a>
+            <a href="#" data-action="instagram">Instagram</a>
+          </nav>
+
+          <p class="note">Horario: Abierto · Cierra a las 5:00 p.m.</p>
+
+          <nav class="links">
+            <a href="#slide-1" data-goto="0">Inicio</a>
+            <a href="#slide-3" data-goto="2">Pagos</a>
+          </nav>
+        </div>
+      </article>
+
+    </section>
+
+    <button class="nav prev" id="prev" aria-label="Anterior">‹</button>
+    <button class="nav next" id="next" aria-label="Siguiente">›</button>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
