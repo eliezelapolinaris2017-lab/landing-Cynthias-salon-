@@ -1,0 +1,152 @@
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  color:white;
+  background:#000;
+  overflow:hidden;
+  font-family: "Playfair Display", serif;
+}
+
+/* fondo */
+.bg{
+  position:fixed;
+  inset:0;
+  background:url("assets/bg.jpg") center/cover no-repeat;
+  filter:brightness(.55) contrast(1.1);
+  z-index:-3;
+}
+
+.shade{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(to bottom, rgba(0,0,0,.65), rgba(0,0,0,.35));
+  z-index:-2;
+}
+
+/* header */
+.header{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  text-align:center;
+  padding:28px 10px 10px;
+}
+
+.brand-title{
+  margin:0;
+  font-family:"Great Vibes", cursive;
+  font-size:56px;
+  letter-spacing:1px;
+}
+
+.brand-sub{
+  opacity:.8;
+  margin-top:6px;
+  font-style:italic;
+}
+
+/* slider */
+.viewport{
+  height:100vh;
+  padding-top:120px;
+}
+
+.slider{
+  display:flex;
+  height:100%;
+  transition:.5s;
+}
+
+.slide{
+  min-width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.content{
+  max-width:900px;
+  width:92vw;
+}
+
+.center{
+  text-align:center;
+}
+
+.hero-script{
+  font-family:"Great Vibes", cursive;
+  font-size:44px;
+  margin:0 0 10px;
+}
+
+h2{
+  font-size:34px;
+  margin:0 0 14px;
+}
+
+h3{
+  margin-top:18px;
+  opacity:.85;
+}
+
+.lead{
+  opacity:.85;
+  line-height:1.6;
+  max-width:60ch;
+  margin:0 auto;
+}
+
+/* enlaces */
+.links{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:22px;
+  justify-content:center;
+}
+
+a{
+  cursor:pointer;
+  text-decoration:none;
+  color:white;
+  font-weight:700;
+  letter-spacing:.5px;
+  opacity:.85;
+}
+
+a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+/* columnas */
+.cols{
+  display:flex;
+  gap:80px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.note{
+  opacity:.7;
+  margin-top:14px;
+}
+
+/* flechas */
+.nav{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:34px;
+  background:none;
+  border:none;
+  color:white;
+  cursor:pointer;
+  opacity:.6;
+}
+
+.nav:hover{opacity:1}
+.prev{left:20px}
+.next{right:20px}
