@@ -1,0 +1,217 @@
+:root{
+  --text: rgba(255,255,255,.94);
+  --muted: rgba(255,255,255,.78);
+  --line: rgba(255,255,255,.18);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  color:var(--text);
+  background:#000;
+  overflow:hidden;
+  font-family:"Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Fondo: oscuro pero visible */
+.bg{
+  position:fixed;
+  inset:0;
+  background:url("assets/bg.jpg") center/cover no-repeat;
+  filter: brightness(.55) contrast(1.08) saturate(1.02); /* <- se ve */
+  transform:scale(1.02);
+  z-index:-3;
+}
+
+/* Oscurece sin matar la foto */
+.shade{
+  position:fixed;
+  inset:0;
+  background:
+    radial-gradient(900px 700px at 50% 25%, rgba(0,0,0,.28), rgba(0,0,0,.62) 65%),
+    linear-gradient(to bottom, rgba(0,0,0,.55), rgba(0,0,0,.45));
+  z-index:-2;
+}
+
+/* Header */
+.header{
+  position:fixed;
+  top:0; left:0; right:0;
+  padding:24px 14px 10px;
+  text-align:center;
+  z-index:5;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:1px;
+  font-size:22px;
+  text-transform:none; /* se ve más premium */
+  text-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.sub{
+  margin-top:6px;
+  font-weight:700;
+  font-size:13px;
+  color:rgba(255,255,255,.78);
+}
+
+/* Slider */
+.viewport{
+  height:100vh;
+  padding-top:110px;
+}
+
+.slider{
+  display:flex;
+  height:100%;
+  transition: transform 520ms cubic-bezier(.2,.8,.2,1);
+  will-change:transform;
+}
+
+.slide{
+  min-width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px 14px 28px;
+}
+
+.content{
+  width:min(940px, 92vw);
+}
+
+.center{text-align:center}
+
+/* Titulos corporativos (nada finos) */
+h1{
+  margin:0 0 10px;
+  font-size:clamp(28px, 4vw, 44px);
+  font-weight:900;
+  letter-spacing:-.4px;
+}
+
+h2{
+  margin:16px 0 10px;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.80);
+}
+
+.lead{
+  margin:0 auto;
+  max-width:68ch;
+  color:var(--muted);
+  line-height:1.7;
+  font-weight:700;
+}
+
+/* Links: solo texto, pero con presencia */
+.links{
+  margin-top:22px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px 22px;
+  justify-content:center;
+}
+
+a{
+  cursor:pointer;
+  color:rgba(255,255,255,.92);
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:.6px;
+  padding-bottom:4px;
+  position:relative;
+  user-select:none;
+}
+
+a:hover{ color:#fff; }
+
+a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:rgba(255,255,255,.55);
+  transition:width .18s ease;
+}
+
+a:hover::after{ width:100%; }
+
+.note{
+  margin-top:14px;
+  font-size:13px;
+  color:rgba(255,255,255,.74);
+  line-height:1.55;
+}
+
+.mono{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  padding:2px 6px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(0,0,0,.22);
+}
+
+/* Servicios sin tarjetas */
+.cols{
+  margin-top:10px;
+  display:flex;
+  justify-content:center;
+  gap:64px;
+  flex-wrap:wrap;
+}
+
+.cols > div{ min-width:240px; }
+
+.cols a{
+  display:block;
+  margin:10px 0;
+  opacity:.88;
+}
+
+.cols a:hover{ opacity:1; }
+
+/* Flechas */
+.nav{
+  position:fixed;
+  top:50%;
+  transform:translateY(-50%);
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.18);
+  background:rgba(0,0,0,.25);
+  color:rgba(255,255,255,.92);
+  font-size:28px;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  z-index:6;
+  opacity:.78;
+  backdrop-filter:blur(10px);
+  transition:opacity .15s ease, background .15s ease, transform .15s ease;
+}
+
+.nav:hover{ opacity:1; background:rgba(255,255,255,.08); }
+.nav:active{ transform:translateY(-50%) translateY(1px); }
+
+.prev{ left:14px; }
+.next{ right:14px; }
+
+/* Responsive */
+@media (max-width: 520px){
+  .viewport{ padding-top: 104px; }
+  .cols{ gap: 26px; }
+  .cols > div{ min-width: 220px; }
+}
